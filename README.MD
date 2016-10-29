@@ -7,7 +7,7 @@ This repo can help you the creation and running of redis cluster in a minute.
 #### Creation
 
 ```
-$ kubectl create configmap redid-conf ./redis.conf
+$ kubectl create configmap redis-conf ./redis.conf
 $ kubectl create -f ./redis-cluster.yaml
 ```
 
