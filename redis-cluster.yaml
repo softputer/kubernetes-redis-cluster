@@ -24,8 +24,8 @@ spec:
 #
 # Redis PetSet Config
 #
-apiVersion: apps/v1alpha1
-kind: PetSet
+apiVersion: apps/v1beta1
+kind: StatefulSet
 metadata:
   name: redis-cluster
 spec:
@@ -36,7 +36,7 @@ spec:
       labels:
         app: redis-cluster
       annotations:
-        pod.alpha.kubernetes.io/initialized: "true"
+        pod.alpha.kubernetes.io/initialized: "false"
         # NOTE: Init container must be idempotent
         # Add a baked-in Redis config file that enables cluster mode
         #pod.alpha.kubernetes.io/init-containers: '[
